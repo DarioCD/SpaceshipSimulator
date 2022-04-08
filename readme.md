@@ -3,7 +3,7 @@
 >En este proyecto se nos pide realizar un menú, en le cual le pidamos al ususario una serie de datos y con esos valores
 > definir su posición, valores,...
 ### Objetivos:
-+ **Implementa una clase de tipo SpaceShip.**  Debe tener como mínimo los siguientes attibutos:
++ **Implementa una clase de tipo SpaceShip.**  Debe tener como mínimo los siguientes atributos:
     + Nombre
     + Matrícula galáctica
     + Aceleración
@@ -35,3 +35,5 @@
   Enlaza este nuevo documento desde el archivo Readme.md.
 + Por último, **diseña una interfaz que permita al usuario crear una nueva nave**, muestre su asciiArt correspondiente
   y permita que el usuario acelere, frene o pare. El usuario debe poder salir en cualquier momento de la aplicación.
+
+[Funcionamiento de la nave espacial](./Docs/SpaceShip.md)
