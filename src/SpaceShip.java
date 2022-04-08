@@ -17,7 +17,7 @@ public class SpaceShip {
         this.velocidadY = 0;
         this.coordenadaX = 0;
         this.coordenadaY = 0;
-        this.direccionX = 0;
+        this.direccionX = 1;
         this.direccionY = 0;
     }
 
@@ -91,5 +91,18 @@ public class SpaceShip {
 
     public void setDireccionY(int direccionY) {
         this.direccionY = direccionY;
+    }
+    public void speedUp(){
+        velocidadX += this.aceleracion;
+        System.out.println("Velocidad en X: " + velocidadX);
+
+        //velocidadY += this.aceleracion;
+        //System.out.println("Velocidad en Y: " + velocidadY);
+
+        coordenadaX += velocidadX;
+        System.out.println("Posicón en X: " + coordenadaX);
+
+        //coordenadaY += velocidadY;
+        //System.out.println("Posicón en X: " + coordenadaY);
     }
 }
