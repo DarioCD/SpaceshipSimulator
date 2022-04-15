@@ -137,6 +137,13 @@ public class SpaceShip {
         System.out.println("Posicón en Y: " + coordenadaY);*/
     }
 
+    public void emergencyStop(){
+        velocidadX = 0;
+        System.out.println("Velocidad en X: " + velocidadX);
+        //velocidadY = 0;
+        //System.out.println("Velocidad en Y: " + velocidadY);
+    }
+
     @Override
     public String toString() {
         return "Nombre de la nave: " + nombre + "\n"+ "Matricula de la nave: " + matricula + "\n" + "Nave: \n" +
