@@ -10,6 +10,9 @@ public class Main {
         String matricula = sc.nextLine();
         System.out.print("Introduce la aceleración de la nave: ");
         float aceleracion = sc.nextFloat();
+        System.out.print("Inotroduce el número maximo de containers: ");
+        int maximoContenedores = sc.nextInt();
         SpaceShip nave = new SpaceShip(nombre, matricula, aceleracion);
+        Cargo cargo = new Cargo(nombre, matricula, aceleracion,maximoContenedores);
     }
 }
