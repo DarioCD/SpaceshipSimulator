@@ -108,6 +108,35 @@ public class SpaceShip {
         //System.out.println("Posicón en X: " + coordenadaY);
     }
 
+    public void brake(){
+        if (velocidadX > 0){
+            velocidadX -= this.aceleracion;
+        }else{
+            velocidadX = 0;
+        }
+        System.out.println("Velocidad en X: " + velocidadX);
+
+        //if (velocidadY > 0){
+        //    velocidadY -= this.aceleracion;
+        //}else{
+        //    velocidadY = 0;
+        //}
+        //System.out.println("Velocidad en Y: " + velocidadY);
+        if (coordenadaX > 0) {
+            coordenadaX += velocidadX;
+        }else{
+            coordenadaX = 0;
+        }
+        System.out.println("Posicón en X: " + coordenadaX);
+
+        /*if (coordenadaY > 0) {
+            coordenadaY += velocidadX;
+        }else{
+            coordenadaY = 0;
+        }
+        System.out.println("Posicón en Y: " + coordenadaY);*/
+    }
+
     @Override
     public String toString() {
         return "Nombre de la nave: " + nombre + "\n"+ "Matricula de la nave: " + matricula + "\n" + "Nave: \n" +
