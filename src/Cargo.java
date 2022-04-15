@@ -30,4 +30,11 @@ public class Cargo extends SpaceShip{
             contenedor++;
         }
     }
+    public void unload(){
+        if (contenedor <= 0){
+            System.out.println("No hay mas contenedores que quitar ");
+        }else{
+            contenedor--;
+        }
+    }
 }
