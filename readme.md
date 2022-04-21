@@ -36,6 +36,6 @@
 + Por último, **diseña una interfaz que permita al usuario crear una nueva nave**, muestre su asciiArt correspondiente
   y permita que el usuario acelere, frene o pare. El usuario debe poder salir en cualquier momento de la aplicación.
 
-[Funcionamiento de la nave espacial](./Docs/SpaceShip.md)
+>[Funcionamiento de la nave espacial](./Docs/SpaceShip.md)
 
-[Funcionamiento de la nave de carga](./Docs/Cargo.md)
+>[Funcionamiento de la nave de carga](./Docs/Cargo.md)
