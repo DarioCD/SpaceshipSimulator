@@ -8,8 +8,8 @@ public class SpaceShip {
     private int coordenadaY;
     private int direccionX;
     private int direccionY;
-    public static final String GREEN = "\u001B[32m";
     public static final String RED = "\u001B[31m";
+    public static final String RESET = "\u001B[0m";
 
     public SpaceShip(String nombre, String matricula, float aceleracion) {
         this.nombre = nombre;
@@ -22,7 +22,6 @@ public class SpaceShip {
         this.direccionX = 1;
         this.direccionY = 0;
     }
-
     public String getNombre() {
         return nombre;
     }
@@ -96,6 +95,7 @@ public class SpaceShip {
     }
     public void speedUp(){
         velocidadX += this.aceleracion;
+        System.out.println(RED + "-----------------------------------------------------");
         System.out.println("Velocidad en X: " + velocidadX);
 
         //velocidadY += this.aceleracion;
@@ -103,6 +103,7 @@ public class SpaceShip {
 
         coordenadaX += velocidadX;
         System.out.println("Posicón en X: " + coordenadaX);
+        System.out.println("-----------------------------------------------------" + RESET);
 
         //coordenadaY += velocidadY;
         //System.out.println("Posicón en X: " + coordenadaY);
@@ -114,6 +115,7 @@ public class SpaceShip {
         }else{
             velocidadX = 0;
         }
+        System.out.println(RED + "-----------------------------------------------------");
         System.out.println("Velocidad en X: " + velocidadX);
 
         //if (velocidadY > 0){
@@ -122,12 +124,9 @@ public class SpaceShip {
         //    velocidadY = 0;
         //}
         //System.out.println("Velocidad en Y: " + velocidadY);
-        if (coordenadaX > 0) {
-            coordenadaX += velocidadX;
-        }else{
-            coordenadaX = 0;
-        }
+        coordenadaX += velocidadX;
         System.out.println("Posicón en X: " + coordenadaX);
+        System.out.println("-----------------------------------------------------" + RESET);
 
         /*if (coordenadaY > 0) {
             coordenadaY += velocidadX;
@@ -139,15 +138,20 @@ public class SpaceShip {
 
     public void emergencyStop(){
         velocidadX = 0;
+        System.out.println(RED + "-----------------------------------------------------");
         System.out.println("Velocidad en X: " + velocidadX);
+        System.out.println("Posición en X: " + coordenadaX);
+        System.out.println("-----------------------------------------------------" + RESET);
         //velocidadY = 0;
         //System.out.println("Velocidad en Y: " + velocidadY);
     }
 
     @Override
     public String toString() {
-        return "Nombre de la nave: " + nombre + "\n"+ "Matricula de la nave: " + matricula + "\n" + "Nave: \n" +
-        RED + "                   `. ___\n" +
+        return RED + "-----------------------------------------------------\n" + "Nombre de la nave: " + nombre + "\n"+
+                "-----------------------------------------------------\n" + "Matricula de la nave: " + matricula + "\n" + "Nave: \n" +
+                "-----------------------------------------------------\n" +
+                 "                   `. ___\n" +
                 "                    __,' __`.                _..----....____\n" +
                 "        __...--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'\n" +
                 "  _..-''-------'   `'   `'   `'     O ``-''._   (,;') _,'\n" +
@@ -160,6 +164,6 @@ public class SpaceShip {
                 "                   `-:._____/______/___/____`.     \\  `\n" +
                 "                               |       `._    `.    \\\n" +
                 "                               `._________`-.   `.   `.___\n" +
-                "                                                  `------'`";
+                "                                                  `------'`" + RESET;
     }
 }
